@@ -1,0 +1,17 @@
+words = input("Enter your text: ")
+
+word_list = words.split()
+og_count_list = [] #original count list for looking highest repetition
+count_list = [] #normal count list that will be sorted to find the highest repetition
+for word in word_list:
+    
+    count = word_list.count(word)
+    og_count_list.append(count)
+    count_list.append(count)
+    
+    
+count_list.sort() 
+
+highest = (count_list[-1])
+word_list_index = og_count_list.index(highest)
+print(word_list[word_list_index])
